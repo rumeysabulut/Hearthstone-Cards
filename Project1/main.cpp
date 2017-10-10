@@ -18,11 +18,12 @@ int main(int argc, const char * argv[]) {
     cout << "Input file: " << argv[3] << endl;
     cout << "Output File:" << argv[4] << endl;
     
-   
-    string procedure = argv[1];
-    string sortAlgo = argv[2];
-    CardManager cardDeck;
-    cardDeck.decideProcedure(procedure, sortAlgo);
+    CardManager cardDeck = CardManager(argv[3], argv[1], argv[2], argv[4] );    //Constructor of CardManager takes the input file.
+    //input file, procedure, sort, output
+ //   string procedure = argv[1];
+  //  string sortAlgo = argv[2];
+    
+ //   cardDeck.decideProcedure(procedure, sortAlgo);
     
     return 0;
 }

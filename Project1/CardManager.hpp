@@ -10,11 +10,23 @@
 #define CardManager_hpp
 
 #include <string>
+#include <vector>
+#include "Card.hpp"
 using namespace std;
 class CardManager{
+private:
+    vector<Card> newCardDeck;
 public:
-    //CardManager();
-    void decideProcedure(string, string );
-    void decideSort(string);
+    CardManager(const char *, const char *,const char *,const char * );      //It reads from file to cardDeck so it creates cardDeck.
+    void decideProcedure(string, string);
+    void fullSort(string&);
+    void filterSort(string&);
+    void full_insertion(long);
+    void full_merge(long, long);
+    void full_mergeSort(long, long, long);
+    void filter_insertion(long);
+    void filter_merge(long, long);
+    void filter_mergeSort(long, long, long);
+    void writeSorted_toFile(const char *);
 };
 #endif /* CardManager_hpp */

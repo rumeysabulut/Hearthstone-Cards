@@ -1,0 +1,2 @@
+New	text	File	tab	kol	read
+Second	text	File	is	it	working
