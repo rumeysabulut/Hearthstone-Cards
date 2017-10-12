@@ -2,21 +2,22 @@
 //  Card.cpp
 //  Project1
 //
-//  Created by Rumeysa Bulut on 10.10.2017.
-//  Copyright © 2017 Rumeysa Bulut. All rights reserved.
+//  11.10.2017
+// Rumeysa Bulut
 //
 #include <iostream>
 #include <sstream>
 #include <vector>
 #include "Card.hpp"
+#define MAXSTRING "zz"
 using namespace std;
 Card::Card(){
-    this->name = "zz";
-    this->className = "zz";
-    this->rarity = "zz";
-    this->set = "zz";
-    this->type = "zz";
-    this->cost = "zz";
+    this->name = MAXSTRING;
+    this->className = MAXSTRING;
+    this->rarity = MAXSTRING;
+    this->set = MAXSTRING;
+    this->type = MAXSTRING;
+    this->cost = MAXSTRING;
 }
 Card::Card(string line){
     vector<string> CardAttributes;
@@ -31,12 +32,6 @@ Card::Card(string line){
     setCardset(CardAttributes[3]);
     setType(CardAttributes[4]);
     setcost(CardAttributes[5]);
-    
-    
-    //Reading from the file for debug
-    for(int i=0; i<CardAttributes.size(); i++)
-        cout<<CardAttributes[i]<<"\t";
-    
     
 }
 
